@@ -1,222 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Grand Baie Day Pass Giveaway | Super Deals Mauritius Co Ltd</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Port Louis Transport & Movers</title>
 <style>
-  /* Reset & base */
-  * {
-    box-sizing: border-box;
-  }
-  body {
+body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f9f9;
-    color: #2c3e50;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+header {
+    background: #0a1f44;
+    color: white;
+    padding: 20px;
     text-align: center;
-    padding-bottom: 50px;
-  }
-  header {
-    background: #00796b;
-    color: #fff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 5px 0 0;
+}
+
+nav {
+    background: #142850;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+section {
     padding: 40px 20px;
-  }
-  header h1 {
-    margin: 0 0 10px;
-    font-size: 2.8rem;
-    font-weight: 700;
-  }
-  header p {
-    font-size: 1.2rem;
-    margin: 8px 0;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Gallery */
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 22px;
     max-width: 1000px;
-    margin: 40px auto 20px;
-    padding: 0 20px;
-  }
-  .gallery img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 14px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .gallery img:hover,
-  .gallery img:focus {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-    outline: none;
-  }
+    margin: auto;
+}
 
-  /* Buttons Container */
-  .button-container {
-    margin: 35px 0 50px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-  }
+h2 {
+    color: #0a1f44;
+}
 
-  /* WhatsApp Button */
-  .whatsapp-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #25D366;
-    color: #fff;
-    padding: 18px 36px;
-    font-size: 1.35rem;
-    font-weight: 700;
-    border-radius: 60px;
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.25s ease;
-    user-select: none;
-  }
-  .whatsapp-button:hover,
-  .whatsapp-button:focus {
-    background-color: #1ebe57;
-    transform: scale(1.07);
-    outline: none;
-  }
-  .whatsapp-button svg {
-    margin-right: 12px;
-    width: 26px;
-    height: 26px;
-  }
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
-  /* Facebook Button */
-  .facebook-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #1877F2;
-    color: #fff;
-    padding: 18px 36px;
-    font-size: 1.35rem;
-    font-weight: 700;
-    border-radius: 60px;
-    box-shadow: 0 6px 20px rgba(24, 119, 242, 0.5);
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.25s ease;
-    user-select: none;
-  }
-  .facebook-button:hover,
-  .facebook-button:focus {
-    background-color: #145dbf;
-    transform: scale(1.07);
-    outline: none;
-  }
-  .facebook-button svg {
-    margin-right: 12px;
-    width: 26px;
-    height: 26px;
-  }
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
-  /* Winner Section */
-  #winner-announcement {
-    max-width: 680px;
-    margin: 60px auto 0;
-    background: #e0f2f1;
-    border-radius: 14px;
-    padding: 36px 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  }
-  #winner-announcement h2 {
-    color: #00796b;
-    font-size: 2.3rem;
-    margin-bottom: 18px;
-    font-weight: 700;
-  }
-  #winner-announcement p {
-    font-size: 1.2rem;
-    margin: 12px 0;
-  }
-  #winner-code {
-    font-weight: 800;
-    color: #004d40;
-    font-size: 1.75rem;
-    letter-spacing: 1.2px;
-  }
+.contact {
+    background: #0a1f44;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
 
-  /* Footer */
-  footer {
-    margin-top: 80px;
-    font-size: 1rem;
-    color: #666;
-    user-select: none;
-  }
-
-  /* Responsive tweaks */
-  @media (max-width: 520px) {
-    header h1 {
-      font-size: 2.1rem;
-    }
-    header p {
-      font-size: 1rem;
-    }
-    .gallery img {
-      height: 150px;
-    }
-    .whatsapp-button,
-    .facebook-button {
-      padding: 14px 28px;
-      font-size: 1.1rem;
-    }
-  }
+footer {
+    background: #142850;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+button {
+    background: #ff7b00;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background: #e96a00;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1>🎉 Win a Perfect Day in Grand Baie! 🎉</h1>
-  <p>Enjoy a 1 Bedroom Apartment, Swimming Pool & Lounge Access — Day Pass for 1 or 2 people 9a.m -16p.m .</p>
-  <p>Choose any date till <strong>November 15, 2025</strong>. Winner announced on <strong>July 14, 2025</strong>.</p>
-  <p><em>Giveaway by Super Deals Mauritius Co Ltd</em></p>
+    <h1>Port Louis Transport & Movers</h1>
+    <p>Reliable Lorry & Employee Transport Services in Mauritius</p>
 </header>
 
-<section class="gallery" aria-label="Giveaway images">
-  <img src="images/narmada1.jpg" alt="Luxury apartment interior" />
-  <img src="images/narmada2.jpg" alt="Swimming pool" />
-  <img src="images/narmada3.jpg" alt="Lounge area" />
-  <img src="images/narmada4.jpg" alt="Terrace view" />
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        We are a professional transport company based in Port Louis, Mauritius.
+        We provide reliable lorry transport and 14-seater employee transport services.
+        Our mission is to deliver safe, secure, and on-time transport solutions
+        for businesses and individuals.
+    </p>
 </section>
 
-<div class="button-container" role="group" aria-label="Giveaway participation and follow buttons">
-  <a
-    href="https://wa.me/23058257539?text=Hi%2C%20I%20want%20to%20enter%20the%20giveaway.%20My%20name%20is%20"
-    class="whatsapp-button"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Enter giveaway via WhatsApp"
-  >
-    <!-- WhatsApp Icon SVG -->
-    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="#fff">
-      <path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12c0 2.1.55 4.1 1.6 5.88L0 24l6.4-1.6a11.94 11.94 0 005.6 1.44c6.63 0 12-5.37 12-12 0-3.21-1.25-6.21-3.48-8.36zM12 21.6a9.55 9.55 0 01-4.91-1.46l-.35-.21-3.8 1 1-3.68-.23-.37A9.45 9.45 0 012.4 12c0-5.16 4.2-9.36 9.36-9.36a9.33 9.33 0 016.63 2.75 9.34 9.34 0 002.73 6.62c0 5.15-4.2 9.35-9.36 9.35zm5.31-7.5c-.29-.15-1.72-.85-1.99-.95-.27-.1-.47-.15-.67.15s-.77.95-.94 1.15-.35.22-.64.08a7.53 7.53 0 01-2.22-1.3 8.38 8.38 0 01-1.55-1.92c-.16-.29-.02-.45.13-.6.13-.13.29-.33.43-.5a1.49 1.49 0 00.22-.38.37.37 0 00-.02-.36c-.07-.17-.68-1.63-.93-2.23-.24-.58-.49-.5-.67-.51-.18-.01-.39-.01-.6-.01s-.56.08-.85.4c-.29.31-1.12 1.1-1.12 2.68 0 1.57 1.15 3.1 1.31 3.32.16.22 2.26 3.45 5.49 4.83a19.1 19.1 0 002.46.89c1.03.4 1.76.34 2.41.21a3.88 3.88 0 001.4-.9 4.93 4.93 0 001.7-3.04c.01-.29.01-.5-.21-.64z"/>
-    </svg>
-    📲 Enter Giveaway via WhatsApp
-  </a>
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Lorry Transport</h3>
+            <p>Cargo collection from Port Louis Harbour, goods transport,
+            vegetables, cattle transport and general haulage.</p>
+        </div>
+        <div class="card">
+            <h3>Furniture Moving</h3>
+            <p>Safe and professional furniture relocation for homes and offices.</p>
+        </div>
+        <div class="card">
+            <h3>14-Seater Employee Transport</h3>
+            <p>Licensed and permit holder for employee transport services across Mauritius.</p>
+        </div>
+        <div class="card">
+            <h3>Business Transport Solutions</h3>
+            <p>Reliable transport support for companies, markets, and commercial needs.</p>
+        </div>
+    </div>
+</section>
 
-  <a
-  href="https://www.facebook.com/superdeals.mu/"
-  class="facebook-button"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Follow Super Deals Mauritius on Facebook"
->
-  <!-- Facebook Icon SVG with fill white -->
-  <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="26" height="26" fill="#fff" style="margin-right: 12px;">
-    <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.333v21.334C0 23.403.597 24 1.325 24H12.82v-9.294H9.692V11.41h3.128V8.797c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.1 2.796.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.59l-.467 3.296h-3.123V24h6.116c.73 0 1.324-.597 1.324-1.333V1.333C24 .597 23.403 0 22.675 0z"/>
-  </svg>
-  Follow Us
-</a>
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone / WhatsApp:</strong> +230 5923 7053</p>
+    <p>Based in Port Louis, Mauritius</p>
+    <br>
+    <a href="tel:+23059237053">
+        <button>Call Now</button>
+    </a>
+</section>
+
+<footer>
+    © 2026 Port Louis Transport & Movers | All Rights Reserved
+</footer>
+
+</body>
+</html>
